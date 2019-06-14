@@ -2,7 +2,6 @@
 
 namespace Sitra\ApiClient\Description;
 
-// Test
 class Reference
 {
     public static $operations = array(
@@ -58,6 +57,21 @@ class Reference
         'getReferenceSelection' => [
             'httpMethod' => 'POST',
             'uri' => '/api/v002/referentiel/selections',
+            'responseModel' => 'getResponse',
+            'parameters' => [
+                'query' => [
+                    'type'      => 'string',
+                    'location'  => 'formParam',
+                    'required'  => true,
+                    'filters' => [
+                        '\Sitra\ApiClient\Description\Search::encodeSearchQuery',
+                    ],
+                ],
+            ],
+        ],
+        'getReferenceSelectionsPerObjects' => [
+            'httpMethod' => 'POST',
+            'uri' => '/api/v002/referentiel/selections-par-objet',
             'responseModel' => 'getResponse',
             'parameters' => [
                 'query' => [
