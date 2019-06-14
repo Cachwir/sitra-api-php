@@ -48,6 +48,7 @@ class AuthenticationSubscriber
               'getReferenceElement',
               'getReferenceInternalCriteria',
               'getReferenceSelection',
+              'getReferenceSelectionsPerObjects',
             ])) {
                 $data = is_array($command['query']) ? $command['query'] : \GuzzleHttp\json_decode($command['query'], true);
                 if (!isset($data['apiKey']) && !isset($data['projetId'])) {
