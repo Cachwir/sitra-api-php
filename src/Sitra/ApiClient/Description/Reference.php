@@ -2,6 +2,7 @@
 
 namespace Sitra\ApiClient\Description;
 
+// Test
 class Reference
 {
     public static $operations = array(
