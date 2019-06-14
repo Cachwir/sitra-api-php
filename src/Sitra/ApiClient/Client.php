@@ -54,6 +54,7 @@ use Symfony\Component\Finder\Finder;
  * @method array getReferenceElement() getReferenceElement(array $params)
  * @method array getReferenceInternalCriteria() getReferenceInternalCriteria(array $params)
  * @method array getReferenceSelection() getReferenceSelection(array $params)
+ * @method array getReferenceSelectionsPerObjects() getReferenceSelectionsPerObjects(array $params)
  *
  * @method array getSsoToken() getSsoToken(array $params)
  * @method array refreshSsoToken() refreshSsoToken(array $params)
@@ -64,7 +65,7 @@ use Symfony\Component\Finder\Finder;
 class Client extends GuzzleClient
 {
     protected $config = [
-      'baseUri'       => 'https://base.apidae-tourisme.com/',
+      'baseUri'       => 'https://api.apidae-tourisme.com/',
       'apiKey'        => null,
       'projectId'     => null,
 
