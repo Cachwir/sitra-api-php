@@ -344,6 +344,16 @@ $selections = $client->getReferenceSelection([
 ]);
 ```
 
+#### Selections per objects
+
+```php
+$selections = $client->getReferenceSelectionsPerObjects([
+    'query' => '{"referenceIds":[64, 5896]}'
+]);
+```
+
+Be careful as the server might reject the request if you ask for more that 200 objects. You'll need to do a request by group of 200 maximum referenceIds.
+
 ### Exports
 
 [Full documentation](http://dev.apidae-tourisme.com/fr/documentation-technique/v2/exports)
